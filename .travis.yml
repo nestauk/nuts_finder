@@ -1,0 +1,16 @@
+dist: xenial
+language: python
+python:
+  - '3.6'
+  - '3.7'
+  - '3.8'  
+install:
+  - pip install --upgrade setuptools
+  - python setup.py install
+  - pip install -r requirements.txt
+  - python -c "import sys; print(sys.path)"
+script:
+  - ./.travis/run.sh
+branches:
+  only:
+    - master
