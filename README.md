@@ -2,14 +2,14 @@
 
 You give it a point, it tells you all the EU NUTS regions.
 
-# Installation
+## Installation
 
 ```python
 
 pip install nuts-finder
 ```
 
-# Usage
+## Usage
 
 ```python
 
@@ -40,7 +40,7 @@ nf.find(lat=53.406115, lon=-2.965604)  # <-- a few seconds
 >>>  'NUTS_NAME': 'Liverpool'}]
 ```
 
-# Advanced usage
+## Advanced usage
 
 The look-up is performed via point-in-polygon tests from the [official repository of NUTS shapefiles](https://ec.europa.eu/eurostat/web/gisco/geodata/reference-data/administrative-units-statistical-units/nuts). You can additionally specify the year (`year`) and scale (1:`scale` Million) of the downloaded shapefiles as follows:
 
