@@ -2,6 +2,13 @@
 
 You give it a point, it tells you all the EU NUTS regions.
 
+# Installation
+
+```python
+
+pip install nuts-finder
+```
+
 # Usage
 
 ```python
