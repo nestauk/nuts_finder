@@ -8,8 +8,8 @@ You give it a point, it tells you all the EU NUTS regions.
 
 from nuts_finder import NutsFinder
 
-nf = NutsFinder()
-nf.find(lat=53.406115, lon=-2.965604)
+nf = NutsFinder()  # <-- expect a little bit of loading time here whilst it downloads some shapefiles
+nf.find(lat=53.406115, lon=-2.965604)  # <-- a few seconds
 
 >>> [{'CNTR_CODE': 'UK',
 >>>  'FID': 'UK',
