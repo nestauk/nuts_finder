@@ -1,12 +1,11 @@
 from setuptools import setup
 
-with open('requirements.txt') as f:
-    required = f.read().splitlines()
-
 common_kwargs = dict(
-    version='0.1',
+    version='0.1.2',
     license='MIT',
-    install_requires=required,
+    install_requires=["geojson==2.5.0",
+                      "requests==2.22.0",
+                      "Shapely==1.6.2.post1"],
     long_description=open('README.md').read(),
     long_description_content_type="text/markdown",
     url='https://github.com/nestauk/nuts_finder',
@@ -30,4 +29,3 @@ common_kwargs = dict(
 setup(name='nuts_finder',
       packages=['nuts_finder'],
       **common_kwargs)
-
