@@ -1,5 +1,5 @@
-Shapely==1.6.2.post1
 geojson==2.5.0
+setuptools==41.4.0
 pytest==3.9.2
-setuptools==38.4.0
-requests==2.20.0
+requests==2.22.0
+Shapely==1.6.2.post1

@@ -8,6 +8,7 @@ common_kwargs = dict(
     license='MIT',
     install_requires=required,
     long_description=open('README.md').read(),
+    long_description_content_type="text/markdown",
     url='https://github.com/nestauk/nuts_finder',
     author='Joel Klinger',
     author_email='joel.klinger@nesta.org.uk',
@@ -20,9 +21,7 @@ common_kwargs = dict(
         'License :: OSI Approved :: MIT License',
         'Natural Language :: English',
         'Operating System :: OS Independent',
-        'Programming Language :: Python :: 3.6',
-        'Environment :: Web Environment'
-        'Topic :: System :: Monitoring',
+        'Programming Language :: Python :: 3.6'
     ],
     python_requires='>3.6',
     include_package_data=True,
