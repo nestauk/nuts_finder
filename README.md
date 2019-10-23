@@ -1,10 +1,6 @@
-# Nuts Finder |build|
+# Nuts Finder [![Build Status](https://travis-ci.com/nestauk/nuts_finder.svg?branch=master)](https://travis-ci.com/nestauk/nuts_finder)
 
 You give it a point, it tells you all the EU NUTS regions.
-
-.. |build| image:: https://travis-ci.org/nestauk/nuts_finder.svg?branch=master
-    :target: https://travis-ci.org/nestauk/nuts_finder
-    :alt: Build Status (master)
 
 # Usage
 
