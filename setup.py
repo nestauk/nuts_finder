@@ -29,6 +29,6 @@ common_kwargs = dict(
 )
 
 setup(name='nuts_finder',
-      packages=['.'],
+      packages=['nuts_finder'],
       **common_kwargs)
 
