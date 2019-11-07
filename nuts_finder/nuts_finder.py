@@ -58,6 +58,6 @@ class NutsFinder:
         nuts = []
         for region in self.shapes['features']:
             s = geometry.shape(region['geometry'])
-            if s.convex_hull.contains(p):
+            if s.contains(p):
                 nuts.append(region['properties'])
         return sorted(nuts, key=lambda row: row['LEVL_CODE'])
