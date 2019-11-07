@@ -62,6 +62,10 @@ nf = NutsFinder(year=2013, scale=60)
 
 Note that the default year is the latest available, and the scale is the median available. At time of writing the available years were `{2003, 2006, 2010, 2013, 2016}` and available scales were `{1, 3, 10, 20, 60}`.
 
+## Points near rivers and coastlines
+
+Unless you use `scale=1`, expect to lose some coverage of points very near to water features (coastal and river regions). If you would like to optimise for speed, you might consider a recursive strategy of using a coarser `NutsFinder` followed by a more granular one to pick up missed points.
+
 ## Speed-ups
 
 The `find(...)` method is significantly faster for coarser geographical scales. For most purposes, a scale of around 10 should be sufficient. See below for a benchmark on my laptop (macOS, 2.3 GHz, 16GB) against the scales available at the time of writing:
