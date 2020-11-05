@@ -1,7 +1,7 @@
 from setuptools import setup
 
 common_kwargs = dict(
-    version='0.1.5',
+    version='0.1.7',
     license='MIT',
     install_requires=["geojson==2.5.0",
                       "requests==2.22.0",
