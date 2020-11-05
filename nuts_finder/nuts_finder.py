@@ -31,7 +31,7 @@ def _setattr(obj, value, value_name, regex, selector):
 
 
 def _get_available(regex):
-    r = requests.get(TOP_URL)
+    r = requests.get(TOP_URL, verify=True)
     values = set(int(yr) for yr in
                  re.findall(regex, r.text))
     return values
@@ -46,7 +46,7 @@ class NutsFinder:
     def _get_shapes(self):
         scale = str(self.scale).zfill(2)
         url = ZIP_URL.format(year=self.year, scale=scale)
-        r = requests.get(url)
+        r = requests.get(url, verify=True)
         r.raise_for_status()
         zipfile = ZipFile(BytesIO(r.content))
         filename = NESTED_FILE.format(year=self.year, scale=scale)

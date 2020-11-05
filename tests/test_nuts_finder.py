@@ -86,16 +86,21 @@ def test_get_available_scales():
 def test_nut_finder():
     nf = NutsFinder()
     result = nf.find(53.406115, -2.965604)
+    for row in result:
+        row.pop('COAST_TYPE')
+        row.pop('MOUNT_TYPE')
+        row.pop('URBN_TYPE')
+        row.pop('NAME_LATN')
     assert result == [{'CNTR_CODE': 'UK',
                        'FID': 'UK',
                        'LEVL_CODE': 0,
                        'NUTS_ID': 'UK',
-                       'NUTS_NAME': 'UNITED KINGDOM'},
+                       'NUTS_NAME': 'United Kingdom'},
                       {'CNTR_CODE': 'UK',
                        'FID': 'UKD',
                        'LEVL_CODE': 1,
                        'NUTS_ID': 'UKD',
-                       'NUTS_NAME': 'NORTH WEST (ENGLAND)'},
+                       'NUTS_NAME': 'North West (England)'},
                       {'CNTR_CODE': 'UK',
                        'FID': 'UKD7',
                        'LEVL_CODE': 2,
