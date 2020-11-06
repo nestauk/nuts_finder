@@ -45,12 +45,13 @@ class NutsFinder:
 
     def _get_shapes(self):
         scale = str(self.scale).zfill(2)
+        filename = NESTED_FILE.format(year=self.year, scale=scale)
         url = ZIP_URL.format(year=self.year, scale=scale)
         r = requests.get(url, verify=True)
         r.raise_for_status()
-        zipfile = ZipFile(BytesIO(r.content))
-        filename = NESTED_FILE.format(year=self.year, scale=scale)
-        shapes = geojson.load(zipfile.open(filename))
+        with ZipFile(BytesIO(r.content)) as zipfile:
+            with zipfile.open(filename) as f:
+                shapes = geojson.load(f)
         return shapes
 
     def find(self, lat, lon):
