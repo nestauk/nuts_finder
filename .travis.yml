@@ -7,7 +7,7 @@ python:
 install:
   - pip install --upgrade setuptools
   - python setup.py install
-  - pip uninstall -y ojd-daps
+  - pip uninstall -y nuts-finder
   - pip install -r requirements.txt
   - python -c "import sys; print(sys.path)"
 script:
