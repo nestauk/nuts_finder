@@ -1,7 +1,11 @@
 from setuptools import setup
+from nuts_finder import __version__
+
+version = ''.join(v for v in __version__ if (v.isnumeric() or v == '.'))
+
 
 common_kwargs = dict(
-    version='0.1.4',
+    version=version,
     license='MIT',
     install_requires=["geojson==2.5.0",
                       "requests==2.22.0",
@@ -20,7 +24,7 @@ common_kwargs = dict(
         'License :: OSI Approved :: MIT License',
         'Natural Language :: English',
         'Operating System :: OS Independent',
-        'Programming Language :: Python :: 3.6'
+        'Programming Language :: Python :: 3.7'
     ],
     python_requires='>3.6',
     include_package_data=True,
