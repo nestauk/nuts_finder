@@ -30,7 +30,7 @@ jobs:
       run: ls      
     - name: Build a binary wheel and a source tarball
       run: >-
-        python -m
+        PYTHONPATH=$PWD python -m
         build
         --sdist
         --wheel
