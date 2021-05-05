@@ -89,8 +89,8 @@ Please note that `nuts-finder` is not developed, maintained or affiliated with E
 > 
 >  2. The permission to use the data is granted on condition that:
 > 
->   1. the data will not be used for commercial purposes;
->   2. the source will be acknowledged. A copyright notice, as specified below, will have to be visible on any printed or electronic publication using the data downloaded from this page.
+>    * the data will not be used for commercial purposes;
+>    * the source will be acknowledged. A copyright notice, as specified below, will have to be visible on any printed or electronic publication using the data downloaded from this page.
 >
 > Copyright notice
 > ----------------
