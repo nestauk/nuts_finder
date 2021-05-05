@@ -1,4 +1,7 @@
-from nuts_finder.nuts_finder import NutsFinder
+try:
+    from nuts_finder.nuts_finder import NutsFinder
+except ModuleNotFoundError:  # Workaround for setup.py
+    pass
 
 
 def path_to_init(_file=__file__, cast_to_str=False):
