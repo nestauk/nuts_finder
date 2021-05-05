@@ -23,11 +23,7 @@ jobs:
         python -m
         pip install
         build
-        --user
-    - name: Check where I am
-      run: echo -e "${PWD} \n ------ \n ${PATH} \n --------- ${PYTHONPATH}"
-    - name: List dir
-      run: ls      
+        --user   
     - name: Build a binary wheel and a source tarball
       run: >-
         PYTHONPATH=$PWD python -m
@@ -36,15 +32,15 @@ jobs:
         --wheel
         --outdir dist/
         .
-    # Test version for debugging
-    - name: Publish distribution to Test PyPI
-      uses: pypa/gh-action-pypi-publish@master
-      with:
-        password: ${{ secrets.TEST_PYPI_API_TOKEN }}
-        repository_url: https://test.pypi.org/legacy/
-#     # Proper version
-#     - name: Publish distribution to PyPI
-#       if: startsWith(github.ref, 'refs/tags')
+#     # Test version for debugging
+#     - name: Publish distribution to Test PyPI
 #       uses: pypa/gh-action-pypi-publish@master
 #       with:
-#         password: ${{ secrets.PYPI_API_TOKEN }}
+#         password: ${{ secrets.TEST_PYPI_API_TOKEN }}
+#         repository_url: https://test.pypi.org/legacy/
+    # Proper version
+    - name: Publish distribution to PyPI
+      if: startsWith(github.ref, 'refs/tags')
+      uses: pypa/gh-action-pypi-publish@master
+      with:
+        password: ${{ secrets.PYPI_API_TOKEN }}
