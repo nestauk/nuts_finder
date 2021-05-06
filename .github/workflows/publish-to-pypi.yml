@@ -31,13 +31,14 @@ jobs:
         .
     # Test version for debugging
     - name: Publish distribution to Test PyPI
+      if: github.ref == 'refs/heads/dev'    
       uses: pypa/gh-action-pypi-publish@master
       with:
         password: ${{ secrets.TEST_PYPI_API_TOKEN }}
         repository_url: https://test.pypi.org/legacy/
     # Proper version
     - name: Publish distribution to PyPI
-      if: startsWith(github.ref, 'refs/tags')
+      if: github.ref == 'refs/heads/master'
       uses: pypa/gh-action-pypi-publish@master
       with:
         password: ${{ secrets.PYPI_API_TOKEN }}
