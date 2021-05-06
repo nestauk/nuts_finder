@@ -20,4 +20,7 @@ def load_current_version():
     return v
 
 
-__version__ = load_current_version()
+try:
+    __version__ = load_current_version()
+except FileNotFoundError:  # Not needed on PyPI, where VERSION has not been bundled
+    pass
